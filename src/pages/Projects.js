@@ -39,9 +39,10 @@ function Projects() {
             />
             <div>
               <p>
-                Tried to replicate WhatsApp UI, and some features also. - Can
-                Create Groups - Can Switch B/w the groups - send messages to any
-                groups Used Firebase for the databases
+                Tried to create a minimal messaging app, and some features also.
+                - Can Register Users, connect people globally using this app, do
+                private chat - Can Switch B/w the users seamlessly - send
+                messages to any friends using this app, it used Pusher for the databases to show you the live message from our friends.
               </p>
               <span style={{ display: "flex", justifyContent: "space-evenly" }}>
                 <a
