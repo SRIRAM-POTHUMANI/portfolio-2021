@@ -1,0 +1,9 @@
+.card-img-top {
+  min-height: 300px;
+  max-height: 350px;
+  min-width: 300px;
+  max-width: 350px;
+}
+.but:hover {
+  background-color: "blueviolet" !important;
+}
