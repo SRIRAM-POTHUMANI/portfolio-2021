@@ -5,10 +5,12 @@ import Softwares from "./pages/Softwares";
 import "./App.css";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import Scroll from "./components/Scroll";
 
 function App() {
   return (
     <div className="container bg-light p-0">
+      <Scroll showBelow={50} />
       <Navbar />
       <About />
       <Softwares />

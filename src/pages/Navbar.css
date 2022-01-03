@@ -1,8 +1,10 @@
-a:hover {
-  color: #d16ba5 !important;
+li a:hover {
+  /* color: #d16ba5 !important; */
+  text-decoration: underline blueviolet !important;
+  font-weight: bolder !important;
   scale: 1.01 !important;
-  transform: 0.5s;
-  text-shadow: 0.5px 0.5px 0.5px #000000;
+  transform: 0.2s;
+  /* text-shadow: 0.5px 0.5px 0.5px #000000; */
 }
 
 .navbars {
