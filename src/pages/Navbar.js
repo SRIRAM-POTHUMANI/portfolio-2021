@@ -54,7 +54,7 @@ function Navbar() {
               <a
                 class="nav-link link-secondary"
                 target="_blank"
-                href="https://drive.google.com/file/d/1T6rn-Mr6UcNe2-py4YOSjcJn7F6PBMUx/view?usp=sharing"
+                href="https://drive.google.com/file/d/1qF_v4QACBH0j3hjpjoQs3GYXWajo7L8D/view?usp=sharing"
                 download
                 style={{
                   border: "1px solid grey",
