@@ -10,7 +10,7 @@ import Scroll from "./components/Scroll";
 function App() {
   return (
     <div className="container bg-light p-0">
-      <Scroll showBelow={50} />
+      <Scroll showBelow={300} />
       <Navbar />
       <About />
       <Softwares />

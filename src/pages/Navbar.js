@@ -6,7 +6,7 @@ import navimg from "../my photos/navbar.JPG";
 function Navbar() {
   return (
     <>
-      <nav class=" container p-0 shadow fixed-top navbar navbar-light bg-white">
+      <nav class=" container p-2 shadow fixed-top navbar navbar-light bg-white">
         <div class=" container-fluid">
           <div class="navbar-brand d-flex" style={{ alignItems: "center" }}>
             <div class="avatar">
@@ -48,6 +48,21 @@ function Navbar() {
             <li class="nav-item">
               <a class="nav-link link-secondary" href="#con">
                 Contact
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link link-secondary"
+                target="_blank"
+                href="https://drive.google.com/file/d/1T6rn-Mr6UcNe2-py4YOSjcJn7F6PBMUx/view?usp=sharing"
+                download
+                style={{
+                  border: "1px solid grey",
+                  borderRadius: "10px",
+                  color: "green",
+                }}
+              >
+                Download CV
               </a>
             </li>
           </ul>

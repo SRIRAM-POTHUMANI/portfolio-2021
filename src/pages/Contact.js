@@ -22,7 +22,7 @@ function Contact() {
                       <h5 class="card-title text-warning">Get in Touch</h5>
                       <p class="card-text">
                         For any information regarding my work kindly, contact me
-                        though the following phone number or email address.
+                        through the following phone number or email address.
                       </p>
                       <h5>
                         <span class="text-warning">PhoneNo:</span>
