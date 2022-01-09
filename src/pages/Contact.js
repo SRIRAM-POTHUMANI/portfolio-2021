@@ -1,6 +1,7 @@
 import React from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import Mailer from "../components/mailer";
 
 function Contact() {
   return (
@@ -67,6 +68,10 @@ function Contact() {
               </div>
             </div>
           </div>
+        </div>
+        <div class="container w-75">
+          <h3 class="text-warning text-center">Send a Review</h3>
+          <Mailer />
         </div>
         <div>
           <hr />
