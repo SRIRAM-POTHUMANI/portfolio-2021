@@ -17,7 +17,7 @@ function Softwares() {
       <div class=" align-self-center">
         <div class="card-body">
           <h5
-            class="card-title text-center fs-2 lead p-3"
+            class="card-title text-center fs-2 lead p-3 myname"
             style={{ color: "blueviolet" }}
           >
             My Software Skills

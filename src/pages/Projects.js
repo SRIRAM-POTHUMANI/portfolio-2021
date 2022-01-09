@@ -12,7 +12,7 @@ function Projects() {
       <div class="align-self-center">
         <div class="card-body">
           <h5
-            class="card-title text-center fs-2 lead p-3"
+            class="card-title text-center fs-2  myname lead p-3"
             style={{ color: "blueviolet" }}
           >
             Portfolio
@@ -42,7 +42,8 @@ function Projects() {
                 Tried to create a minimal messaging app, and some features also.
                 - Can Register Users, connect people globally using this app, do
                 private chat - Can Switch B/w the users seamlessly - send
-                messages to any friends using this app, it used Pusher for the databases to show you the live message from our friends.
+                messages to any friends using this app, it used Pusher for the
+                databases to show you the live message from our friends.
               </p>
               <span style={{ display: "flex", justifyContent: "space-evenly" }}>
                 <a

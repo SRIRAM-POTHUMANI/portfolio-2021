@@ -14,10 +14,12 @@ function Navbar() {
                 <Avatar alt="Jack Sparrow" src={navimg} />
               </a>
             </div>
-            <a href="#abt" class="nav-link link-secondary">
-              <span className="" style={{ color: "black" }}>
-                Sriram Pothumani
-              </span>
+            <a
+              href="#abt"
+              class="myname nav-link link-secondary"
+              style={{ color: "black" }}
+            >
+              Sriram Pothumani
             </a>
           </div>
           <ul class="nav justify-content-end  d-flex justify-content-between">
@@ -52,7 +54,7 @@ function Navbar() {
             </li>
             <li class="nav-item">
               <a
-                class="nav-link link-secondary"
+                class="nav-link link-secondary myname"
                 target="_blank"
                 href="https://drive.google.com/file/d/1qF_v4QACBH0j3hjpjoQs3GYXWajo7L8D/view?usp=sharing"
                 download

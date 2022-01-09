@@ -8,7 +8,7 @@ function Experience() {
       <div class="align-self-center">
         <div class="card-body">
           <h5
-            class="card-title text-center fs-2 lead p-3"
+            class="card-title text-center fs-2 myname lead p-3"
             style={{ color: "blueviolet" }}
           >
             Experience

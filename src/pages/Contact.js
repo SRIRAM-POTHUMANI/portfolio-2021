@@ -9,7 +9,7 @@ function Contact() {
       <div class="align-self-center">
         <div class="card-body">
           <h5
-            class="card-title text-dark text-center fs-1 fw-5  p-3"
+            class="card-title myname text-dark text-center fs-1 fw-5  p-3"
             style={{ color: "white" }}
           >
             Contact
@@ -70,14 +70,14 @@ function Contact() {
           </div>
         </div>
         <div class="container">
-          <h3 class="text-warning text-center">Send a Review</h3>
+          <h3 class="text-warning  text-center">Send a Review</h3>
           <Mailer />
         </div>
         <div>
           <hr />
-          <div class="fs-6 text-center text-dark">
+          <div class="fs-6 text-center text-dark myname">
             © Copyright 2021{" "}
-            <span class="text-warning">
+            <span class="text-warning ">
               {" "}
               <span class="vr mx-1 text-white"></span> Designed by Sriram
               Pothumani

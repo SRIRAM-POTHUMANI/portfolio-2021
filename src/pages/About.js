@@ -20,7 +20,7 @@ function About() {
           <div>
             <div class="card-body">
               <span
-                class="card-title fs-2 bold"
+                class="card-title fs-2 bold myname"
                 style={{ color: "blueviolet" }}
               >
                 Hello👋
