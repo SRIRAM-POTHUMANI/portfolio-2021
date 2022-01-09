@@ -29,7 +29,6 @@ const Mailer = () => {
               name="name"
               class="form-control"
               id="exampleFormControlInput1"
-              placeholder="Your Name Please"
             />
           </div>
           <div class="mb-3">
@@ -41,7 +40,6 @@ const Mailer = () => {
               name="user_email"
               class="form-control"
               id="exampleFormControlInput2"
-              placeholder="your_email@example.com"
             />
           </div>
 
@@ -54,7 +52,6 @@ const Mailer = () => {
               name="message"
               id="exampleFormControlTextarea1"
               rows="3"
-              placeholder="Please enter a message here for me"
             ></textarea>
           </div>
           <input
