@@ -69,7 +69,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div class="container w-75">
+        <div class="container">
           <h3 class="text-warning text-center">Send a Review</h3>
           <Mailer />
         </div>
