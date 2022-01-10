@@ -49,6 +49,7 @@ const Mailer = () => {
               <TextField
                 type="email"
                 required
+                name="user_email"
                 id="standard-required"
                 label="Email"
                 width="auto"
