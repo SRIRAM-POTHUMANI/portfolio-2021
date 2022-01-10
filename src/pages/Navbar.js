@@ -6,7 +6,10 @@ import navimg from "../my photos/navbar.JPG";
 function Navbar() {
   return (
     <>
-      <nav class=" container p-2 shadow fixed-top navbar navbar-light bg-white">
+      <nav
+        class=" container p-2 shadow fixed-top navbar navbar-light bg-white"
+        style={{ position: "sticky" }}
+      >
         <div class=" container-fluid">
           <div class="navbar-brand d-flex" style={{ alignItems: "center" }}>
             <div class="avatar">

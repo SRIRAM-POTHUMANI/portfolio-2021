@@ -3,7 +3,7 @@ import abtimg from "../my photos/aboutphoto.JPG";
 import "./About.css";
 function About() {
   return (
-    <div className="container card pt-5 mt-5 lead" id="abt">
+    <div className="container card pt-5 lead" id="abt">
       <div class="row justify-content-center">
         <div class="col card-img-top m-auto">
           <div class=" h-100 card-img-top">
