@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import Avatar from "@material-ui/core/Avatar";
-import navimg from "../my photos/navbar.JPG";
+import navimg from "../my photos/navbar-min.JPG";
 
 function Navbar() {
   return (

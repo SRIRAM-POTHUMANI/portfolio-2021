@@ -1,5 +1,5 @@
 import React from "react";
-import abtimg from "../my photos/aboutphoto.JPG";
+import abtimg from "../my photos/aboutphoto-min.JPG";
 import "./About.css";
 function About() {
   return (
@@ -11,7 +11,11 @@ function About() {
               src={abtimg}
               class="card-img-top bg-light shadow-lg"
               alt="Photo"
-              style={{ borderRadius: "50%" }}
+              style={{
+                borderRadius: "50%",
+                transition: "ease-in",
+                transitionDelay: "0.2s",
+              }}
             />
           </div>
         </div>
