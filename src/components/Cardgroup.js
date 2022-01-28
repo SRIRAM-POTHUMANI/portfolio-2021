@@ -18,7 +18,12 @@ function Cardgroup({ image1, image2 }) {
             <div class="card-footer text-center">
               <a
                 class="btn btn-secondary"
+                rel="noreferrer"
+                target="_blank"
                 href="https://www.linkedin.com/company/sakthi-solutions/about/"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="LinkedIn of Sakthi Solutions"
               >
                 LinkedIn
               </a>
@@ -40,6 +45,11 @@ function Cardgroup({ image1, image2 }) {
               <a
                 class="btn btn-secondary"
                 href="https://www.linkedin.com/company/sundaram-finance/"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="LinkedIn of SMF"
+                rel="noreferrer"
+                target="_blank"
               >
                 LinkedIn
               </a>

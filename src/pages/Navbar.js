@@ -58,8 +58,9 @@ function Navbar() {
             <li class="nav-item">
               <a
                 class="nav-link link-secondary myname"
+                rel="noreferrer"
                 target="_blank"
-                href="https://drive.google.com/file/d/1qF_v4QACBH0j3hjpjoQs3GYXWajo7L8D/view?usp=sharing"
+                href="https://drive.google.com/file/d/1BJmcHfIim3U0XXf0FQ8LQfJ5PVTvMGxH/view?usp=sharing"
                 download
                 style={{
                   border: "1px solid grey",

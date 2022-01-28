@@ -37,15 +37,23 @@ function Contact() {
                     <div class=" d-flex px-3 gap-3">
                       <a
                         class="btn btn-secondary"
+                        rel="noreferrer"
                         target="_blank"
                         href="https://www.linkedin.com/in/sriram-pothumani/"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="bottom"
+                        title="LinkedIn"
                       >
                         <LinkedInIcon />
                       </a>
                       <a
                         class="btn btn-secondary"
+                        rel="noreferrer"
                         target="_blank"
                         href="https://github.com/SRIRAM-POTHUMANI"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="bottom"
+                        title="GitHub"
                       >
                         <GitHubIcon />
                       </a>
