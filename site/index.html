@@ -3,241 +3,303 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#000000">
-<meta name="description" content="Sriram Pothumani — Full-Stack Developer at Runcode. Node.js, TypeScript, React, microservices.">
-<title>Sriram Pothumani Portfolio</title>
+<title>Sriram Pothumani · Full-Stack Developer</title>
+<meta name="description" content="Sriram Pothumani — full-stack developer at Runcode Software Solutions. Billing, ZATCA e-invoicing and ERP integrations on Node.js/TypeScript microservices.">
+<meta property="og:title" content="Sriram Pothumani · Full-Stack Developer">
+<meta property="og:description" content="Billing, e-invoicing and ERP systems for fleet and mobility businesses. Node.js · TypeScript · React/Next.js · Microservices.">
+<meta property="og:image" content="https://sriram-pothumani.netlify.app/img/aboutphoto-min.JPG">
 <link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <style>
-  :root { --accent: #8a2be2; --accent-soft: #f3e8ff; --ink: #23272b; }
-  * { box-sizing: border-box; font-family: Quicksand, sans-serif; letter-spacing: .5px; }
-  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-  body { background: var(--ink); margin: 0; }
-  .page { background: #fff; max-width: 1140px; margin: 0 auto; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,.5); }
-  .navbar { box-shadow: 0 2px 12px rgba(0,0,0,.12); background: #fff; }
-  .navbar-brand img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
-  .myname { background: linear-gradient(90deg, #a855f7, #8a2be2); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: hue 4s linear infinite; font-weight: 600; }
-  @keyframes hue { to { filter: hue-rotate(1turn); } }
-  .nav-link { color: #555 !important; }
-  .nav-link:hover { color: var(--accent) !important; text-decoration: underline var(--accent); }
-  .btn-accent { color: var(--accent); border: 1px solid var(--accent); }
-  .btn-accent:hover { background: var(--accent); color: #fff; }
-  section { padding: 64px 24px; }
-  section + section { border-top: 1px solid #eee; }
-  h2.title { color: var(--accent); font-weight: 600; margin-bottom: 32px; text-align: center; }
-  .hero-photo { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 30px rgba(138,43,226,.25); }
-  .hello { color: var(--accent); border-bottom: 1px solid #ddd; padding-bottom: 8px; }
-  .about p { font-size: 1.05rem; line-height: 1.7; color: #333; }
-  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
-  .stat { flex: 1 1 120px; background: var(--accent-soft); border-radius: 12px; padding: 12px; text-align: center; }
-  .stat b { display: block; font-size: 1.5rem; color: var(--accent); }
-  .skills { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 4px; border-radius: 12px; }
-  .skills img { width: 56px; height: 56px; object-fit: contain; margin-bottom: 10px; transition: transform .3s; }
-  .skills:hover { color: var(--accent); }
-  .skills:hover img { transform: scale(1.1); }
-  .skill-group { font-weight: 600; color: #777; margin: 24px 0 8px; text-transform: uppercase; font-size: .8rem; letter-spacing: 1.5px; }
-  .card { border: 1px solid #eee; border-radius: 16px; overflow: hidden; transition: box-shadow .3s, transform .3s; height: 100%; }
-  .card:hover { box-shadow: 0 10px 30px rgba(138,43,226,.18); transform: translateY(-3px); }
-    .work-banner { height: 160px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; font-weight: 700; }
-  .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 2px 10px; font-size: .78rem; margin: 2px; }
-  .card ul { padding-left: 18px; color: #444; }
-  .card li { margin-bottom: 4px; }
-  .exp-logo { width: 72px; height: 72px; object-fit: contain; border-radius: 12px; background: #fafafa; border: 1px solid #eee; padding: 6px; flex-shrink: 0; }
-  .exp-logo.text { display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; background: linear-gradient(135deg, #a855f7, #6d28d9); border: 0; font-size: 1.4rem; }
-  .timeline-date { color: var(--accent); font-weight: 600; font-size: .9rem; }
-  footer { background: #f8f8f8; padding: 20px; text-align: center; color: #666; }
-  @media (max-width: 576px) { section { padding: 48px 16px; } .hero-photo { width: 200px; height: 200px; } }
+  :root {
+    --bg: #fbfbfd; --surface: #ffffff; --ink: #0f1115; --muted: #5b6270; --faint: #8a91a0;
+    --line: #e7e8ee; --accent: #6d28d9; --accent-soft: #f1eafe; --accent-ink: #5b21b6;
+    --shadow: 0 1px 2px rgba(15,17,21,.04), 0 8px 24px rgba(15,17,21,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b0c10; --surface: #13151b; --ink: #eceef3; --muted: #a2a8b6; --faint: #737a89;
+      --line: #23262f; --accent: #a78bfa; --accent-soft: #1f1933; --accent-ink: #c4b5fd;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b0c10; --surface: #13151b; --ink: #eceef3; --muted: #a2a8b6; --faint: #737a89;
+    --line: #23262f; --accent: #a78bfa; --accent-soft: #1f1933; --accent-ink: #c4b5fd;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 Inter, system-ui, -apple-system, Segoe UI, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+  header.nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: saturate(160%) blur(12px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+  .brand { font-weight: 700; text-decoration: none; letter-spacing: -.01em; white-space: nowrap; }
+  .brand span { color: var(--accent); }
+  .nav nav { display: flex; align-items: center; gap: 22px; font-size: 14.5px; }
+  .nav nav a { text-decoration: none; color: var(--muted); }
+  .nav nav a:hover { color: var(--ink); }
+  .icon-btn { background: none; border: 1px solid var(--line); color: var(--muted); width: 34px; height: 34px; border-radius: 8px; cursor: pointer; display: grid; place-items: center; }
+  .icon-btn:hover { color: var(--ink); border-color: var(--faint); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px; font-weight: 600; font-size: 14.5px; text-decoration: none; border: 1px solid var(--line); background: var(--surface); color: var(--ink); transition: border-color .2s, transform .2s; }
+  .btn:hover { border-color: var(--faint); transform: translateY(-1px); }
+  .nav nav a.btn.primary, .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  :root[data-theme="dark"] .btn.primary { color: #0b0c10 !important; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { color: #0b0c10 !important; } }
+  .btn.sm { padding: 7px 12px; font-size: 13.5px; }
+  @media (max-width: 720px) { .nav nav { gap: 14px; } .nav nav a.hide-sm { display: none; } }
+
+  .hero { padding: 88px 24px 72px; }
+  .hero-top { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .avatar { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--surface); box-shadow: var(--shadow); flex-shrink: 0; }
+  .status { font-size: 13.5px; color: var(--muted); }
+  .status b { color: var(--ink); font-weight: 600; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e; margin-right: 6px; box-shadow: 0 0 0 3px color-mix(in srgb, #22c55e 25%, transparent); }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); line-height: 1.08; letter-spacing: -.03em; margin: 0 0 20px; font-weight: 700; max-width: 17ch; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lede { font-size: clamp(17px, 2vw, 19px); color: var(--muted); max-width: 62ch; margin: 0 0 32px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; }
+  .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; margin-top: 56px; }
+  .fact { background: var(--surface); padding: 18px 20px; }
+  .fact b { display: block; font-size: 22px; letter-spacing: -.02em; }
+  .fact span { font-size: 13.5px; color: var(--muted); }
+  @media (max-width: 720px) { .facts { grid-template-columns: repeat(2, 1fr); } .hero { padding: 56px 16px 48px; } .wrap { padding: 0 16px; } }
+
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .eyebrow { font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 10px; }
+  h2 { font-size: clamp(26px, 3.2vw, 34px); letter-spacing: -.02em; margin: 0 0 12px; line-height: 1.2; }
+  .sub { color: var(--muted); max-width: 60ch; margin: 0 0 40px; }
+
+  .case { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 32px; box-shadow: var(--shadow); margin-bottom: 20px; display: grid; grid-template-columns: 220px 1fr; gap: 32px; }
+  .case-meta h3 { margin: 0 0 4px; font-size: 22px; letter-spacing: -.01em; }
+  .case-meta .kind { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .case-meta dl { margin: 0; font-size: 13.5px; }
+  .case-meta dt { color: var(--faint); margin-top: 12px; }
+  .case-meta dd { margin: 2px 0 0; }
+  .case h4 { font-size: 12.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); margin: 0 0 8px; font-weight: 600; }
+  .case p { margin: 0 0 20px; color: var(--muted); }
+  .case ul { margin: 0 0 20px; padding: 0; list-style: none; }
+  .case li { padding-left: 20px; position: relative; margin-bottom: 9px; }
+  .case li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 7px; height: 7px; border-radius: 2px; background: var(--accent); opacity: .8; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12.5px; padding: 3px 9px; border-radius: 6px; background: var(--accent-soft); color: var(--accent-ink); }
+  @media (max-width: 820px) { .case { grid-template-columns: 1fr; gap: 8px; padding: 22px; } }
+
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+  .card h3 { font-size: 16.5px; margin: 0 0 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card .num { font-size: 12.5px; color: var(--accent); margin-bottom: 10px; display: block; }
+  @media (max-width: 820px) { .grid3 { grid-template-columns: 1fr; } }
+
+  .timeline { margin: 0; padding: 0; list-style: none; }
+  .timeline li { display: grid; grid-template-columns: 170px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px dashed var(--line); }
+  .timeline li:last-child { border-bottom: 0; }
+  .when { color: var(--faint); font-size: 14px; padding-top: 2px; }
+  .role { font-weight: 600; font-size: 17px; }
+  .org { color: var(--muted); font-size: 14.5px; margin-bottom: 6px; }
+  .timeline p { margin: 0; color: var(--muted); font-size: 15px; }
+  @media (max-width: 640px) { .timeline li { grid-template-columns: 1fr; gap: 4px; } }
+
+  .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 40px; }
+  .skill-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .skill-row b { font-weight: 600; }
+  .skill-row span { color: var(--muted); }
+  @media (max-width: 820px) { .skills { grid-template-columns: 1fr; } }
+  @media (max-width: 480px) { .skill-row { grid-template-columns: 1fr; gap: 2px; } }
+
+  .contact { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+  .links { display: grid; gap: 10px; }
+  .link { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; background: var(--surface); transition: border-color .2s; }
+  .link:hover { border-color: var(--accent); }
+  .link small { color: var(--faint); display: block; font-size: 12.5px; }
+  .link .arrow { color: var(--faint); }
+  @media (max-width: 820px) { .contact { grid-template-columns: 1fr; } }
+
+  footer { padding: 32px 0 48px; color: var(--faint); font-size: 13.5px; border-top: 1px solid var(--line); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>
 </head>
 <body>
-<div class="page">
 
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid px-3">
-    <a class="navbar-brand d-flex align-items-center gap-2" href="#about">
-      <img src="img/navbar-min.JPG" alt=""><span class="myname">Sriram Pothumani</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Softwares</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item"><a class="btn btn-accent btn-sm ms-lg-2 my-2 my-lg-0" href="https://drive.google.com/file/d/1gTHZJDqmlt2QOo9E3Vg3lWd5k6s2M29e/view?usp=sharing" target="_blank" rel="noopener">Download CV</a></li>
-      </ul>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Sriram Pothumani<span>.</span></a>
+    <nav>
+      <a href="#work" class="hide-sm">Work</a>
+      <a href="#approach" class="hide-sm">Approach</a>
+      <a href="#experience" class="hide-sm">Experience</a>
+      <a href="#contact" class="hide-sm">Contact</a>
+      <button class="icon-btn" id="theme" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn sm primary" href="https://drive.google.com/file/d/1gTHZJDqmlt2QOo9E3Vg3lWd5k6s2M29e/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-top">
+      <img class="avatar" src="img/aboutphoto-min.JPG" alt="Sriram Pothumani">
+      <div class="status"><span class="dot"></span><b>Full-Stack Developer</b> at Runcode Software Solutions · Madurai, India</div>
+    </div>
+    <h1>I build <em>billing, e-invoicing &amp; ERP</em> systems for fleet businesses.</h1>
+    <p class="lede">Full-stack developer with 4.5+ years shipping production platforms for fleet leasing, rental and corporate vehicle sharing. Backend-heavy on Node.js/TypeScript microservices, with React and Next.js on the front, and hands-on ownership from design to deployment.</p>
+    <div class="cta">
+      <a class="btn primary" href="#work">See my work</a>
+      <a class="btn" href="https://drive.google.com/file/d/1gTHZJDqmlt2QOo9E3Vg3lWd5k6s2M29e/view?usp=sharing" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>4.5+ yrs</b><span>at Runcode, since Feb 2022</span></div>
+      <div class="fact"><b>2</b><span>production platforms</span></div>
+      <div class="fact"><b>20+</b><span>microservices contributed to</span></div>
+      <div class="fact"><b>1,500+</b><span>commits shipped</span></div>
     </div>
   </div>
-</nav>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="row align-items-center g-5 justify-content-center">
-    <div class="col-md-5 text-center"><img class="hero-photo" src="img/aboutphoto-min.JPG" alt="Sriram Pothumani"></div>
-    <div class="col-md-7">
-      <h3 class="hello">Hello 👋</h3>
-      <p>I'm a <b>Full-Stack Developer</b> from Madurai, Tamil Nadu, India 🇮🇳, working at <b>Runcode Software Solutions</b> since February 2022. I build and run production systems for fleet, rental and vehicle-sharing businesses — from Node.js / TypeScript microservices and Kafka pipelines to React and Next.js admin portals.</p>
-      <p>Most of my days go into billing and invoicing engines, <b>ZATCA e-invoicing</b> (Saudi Arabia), <b>ERP integrations with Epicor</b>, approval workflows and multi-tenant platforms — and I own releases and deployments for multiple client environments.</p>
-      <p>I work AI-first with <b>Claude</b> (Claude Code) as my engineering partner across the whole cycle: solutioning and design, development, code review, debugging, and releases and deployments.</p>
-      <div class="stats">
-        <div class="stat"><b>4+ yrs</b>at Runcode</div>
-        <div class="stat"><b>1,500+</b>commits shipped</div>
-        <div class="stat"><b>20+</b>services worked on</div>
-      </div>
-      <p class="mb-3">I like talking to people and hearing new ideas 💡. Feel free to reach out ⤵️</p>
-      <a class="btn btn-accent" href="#contact">Contact</a>
-      <a class="btn btn-accent ms-2" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-accent ms-2" href="https://github.com/SRIRAM-POTHUMANI" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</section>
+  <section id="work">
+    <div class="wrap">
+      <p class="eyebrow">Selected work</p>
+      <h2>Two platforms, end to end</h2>
+      <p class="sub">Both are live, multi-tenant products used by fleet and mobility businesses. I work across the stack, but most of my time goes into the backend services that move money and vehicles.</p>
 
-<!-- SKILLS -->
-<section id="skills">
-  <h2 class="title">My Software Skills</h2>
-  <div id="skillGrid"></div>
-</section>
-
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2 class="title">Portfolio</h2>
-  <div class="row g-4">
-    <div class="col-lg-6">
-      <div class="card">
-        <div class="work-banner" style="background:linear-gradient(135deg,#8a2be2,#4f46e5)">Fleetable</div>
-        <div class="card-body">
-          <h5>Fleetable — Fleet &amp; Rental Management Platform</h5>
-          <p class="text-muted small">Enterprise fleet leasing / rental ERP · Feb 2022 – present</p>
+      <article class="case">
+        <div class="case-meta">
+          <h3>Fleetable</h3>
+          <p class="kind">Fleet leasing &amp; rental ERP</p>
+          <dl>
+            <dt>Role</dt><dd>Full-stack developer, release owner</dd>
+            <dt>Period</dt><dd>Feb 2022 – present</dd>
+            <dt>Compliance</dt><dd>ZATCA (Saudi e-invoicing)</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>The problem</h4>
+          <p>Leasing and rental businesses need contracts, invoicing and collections that stay compliant with Saudi e-invoicing rules and post cleanly into their ERP, across several client deployments.</p>
+          <h4>What I built</h4>
           <ul>
-            <li>Core API: invoicing &amp; billing events, contracts, collections, refunds, cash registers, bank deposits, settlements and accruals.</li>
-            <li>Built the <b>ZATCA e-invoicing</b> library (UBL XML generation, signing, QR, BR-KSA validation) and POS invoice numbering.</li>
-            <li><b>Epicor ERP</b> integration — auto-posting of invoices, collections and refunds, fiscal-period handling, Kafka consumers and retry jobs.</li>
-            <li>Shared workflow/approval and idempotency mixins used across services; payment-gateway callbacks and promo codes.</li>
-            <li>Web portal screens in React: approvals, collections/refunds, bank accounts, ZATCA credit/debit notes.</li>
-            <li>Own release versioning, Docker/pipeline updates and multi-client deployments on Kubernetes (GKE).</li>
+            <li><b>Billing core:</b> invoicing events, contracts, collections and refunds across every payment mode, cash registers, bank deposits, settlements and accruals.</li>
+            <li><b>ZATCA e-invoicing library:</b> UBL XML generation, cryptographic signing, QR codes, BR-KSA validation and POS invoice numbering.</li>
+            <li><b>Epicor ERP integration:</b> auto-posting of invoices, collections and refunds, fiscal-period handling, Kafka consumers and retry jobs.</li>
+            <li><b>Shared platform modules:</b> approval workflows, idempotency and round-robin assignment, used across the service estate.</li>
+            <li><b>Releases:</b> I own versioning, pipelines and multi-client deployments on Kubernetes (GKE), plus production data fixes.</li>
           </ul>
-          <span class="tag">Node.js</span><span class="tag">Moleculer</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">React</span><span class="tag">Kubernetes</span><span class="tag">ZATCA</span><span class="tag">Epicor</span>
+          <div class="tags"><span class="tag">Node.js</span><span class="tag">Moleculer</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">React</span><span class="tag">Kubernetes</span><span class="tag">ZATCA</span><span class="tag">Epicor</span></div>
         </div>
-      </div>
-    </div>
-    <div class="col-lg-6">
-      <div class="card">
-        <div class="work-banner" style="background:linear-gradient(135deg,#0ea5e9,#8a2be2)">Check N Share</div>
-        <div class="card-body">
-          <h5>Check N Share — Vehicle Sharing &amp; Booking Platform</h5>
-          <p class="text-muted small">Corporate car-sharing platform · Jun 2022 – present</p>
+      </article>
+
+      <article class="case">
+        <div class="case-meta">
+          <h3>Check N Share</h3>
+          <p class="kind">Corporate vehicle-sharing platform</p>
+          <dl>
+            <dt>Role</dt><dd>Original builder, full-stack</dd>
+            <dt>Period</dt><dd>Jun 2022 – present</dd>
+            <dt>Scope</dt><dd>Nearly every microservice</dd>
+          </dl>
+        </div>
+        <div>
+          <h4>The problem</h4>
+          <p>Companies sharing a vehicle pool need self-service booking, keyless access and clear accountability for every trip, damage and parking event.</p>
+          <h4>What I built</h4>
           <ul>
-            <li>One of the original builders; contributed to almost every microservice.</li>
-            <li>Contract lifecycle: bookings, advance bookings, overlap checks, force-close, no-show and auto-cancel, cost calculation.</li>
-            <li>Next.js admin control panel — the most-committed codebase — plus the API gateway.</li>
-            <li>Telematics &amp; vehicle commands (lock/unlock), geofences &amp; parking polygons, damage checklists with email + push notifications.</li>
-            <li>Multi-tenant roles &amp; permissions, activity logs / contract flow history, announcements and Cube.js reports.</li>
+            <li><b>Booking &amp; contract lifecycle:</b> advance bookings, overlap checks, force-close, no-show and auto-cancel, cost calculation.</li>
+            <li><b>Admin control panel (Next.js) and API gateway:</b> the codebases I've contributed to most.</li>
+            <li><b>Telematics:</b> vehicle commands (lock/unlock), geofences and parking polygons, automatic out-of-parking status.</li>
+            <li><b>Accountability:</b> damage checklists with email and push notifications, activity logs and contract flow history.</li>
+            <li><b>Multi-tenant platform:</b> roles and permissions, announcements and Cube.js reporting.</li>
           </ul>
-          <span class="tag">TypeScript</span><span class="tag">Moleculer</span><span class="tag">PostgreSQL / PostGIS</span><span class="tag">Sequelize</span><span class="tag">Next.js</span><span class="tag">Cube.js</span><span class="tag">Ory</span><span class="tag">Azure</span>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">Moleculer</span><span class="tag">PostgreSQL / PostGIS</span><span class="tag">Sequelize</span><span class="tag">Next.js</span><span class="tag">Cube.js</span><span class="tag">Ory</span><span class="tag">Azure</span></div>
         </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <p class="eyebrow">How I work</p>
+      <h2>AI-first, from solution to production</h2>
+      <p class="sub">I use Claude (Claude Code) as an engineering partner across the whole cycle. It helps me move faster without cutting corners on correctness or releases.</p>
+      <div class="grid3">
+        <div class="card"><span class="num mono">01</span><h3>Solutioning</h3><p>Explore the codebase, compare approaches and write up the design before touching code.</p></div>
+        <div class="card"><span class="num mono">02</span><h3>Development &amp; review</h3><p>Implement in small verified steps, then review diffs for correctness, edge cases and regressions.</p></div>
+        <div class="card"><span class="num mono">03</span><h3>Debugging &amp; deployment</h3><p>Trace production issues, script safe data fixes, and ship versioned releases across client environments.</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <h2 class="title">Experience</h2>
-  <div class="row g-4 justify-content-center">
-    <div class="col-lg-10">
-      <div class="card p-4"><div class="d-flex gap-3">
-        <div class="exp-logo text">R</div>
-        <div>
-          <h5 class="mb-0">Full-Stack Developer · Runcode Software Solutions</h5>
-          <div class="timeline-date">Feb 2022 – Present · Full-time</div>
-          <p class="mt-2 mb-2">Full-stack developer on two production platforms — Fleetable (fleet leasing &amp; rental ERP) and Check N Share (vehicle sharing). Backend-heavy across Node.js/TypeScript microservices with ownership of billing, e-invoicing, ERP integrations, releases and deployments. Uses Claude (Claude Code) day to day for solutioning, development, code review and deployment.</p>
-          <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div></div>
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+      <p class="sub">I moved into engineering after three years in business development and fund operations, which still shapes how I think about billing and money flows.</p>
+      <ol class="timeline">
+        <li><div class="when mono">Feb 2022 – now</div><div><div class="role">Full-Stack Developer</div><div class="org">Runcode Software Solutions · Full-time</div><p>Fleetable and Check N Share: billing, ZATCA e-invoicing, Epicor ERP integration, telematics, and releases and deployments.</p></div></li>
+        <li><div class="when mono">May – Dec 2021</div><div><div class="role">Full-Stack Developer (Apprenticeship)</div><div class="org">GUVI Geek Networks, IITM Research Park</div><p>Full-stack MERN apprenticeship covering MongoDB, Express, React and Node.js, building and deploying full-stack web applications.</p></div></li>
+        <li><div class="when mono">Jul 2019 – May 2021</div><div><div class="role">Senior Business Developer</div><div class="org">Sakthi Solutions</div><p>Joined as software &amp; technical support executive and grew into business development: POS software sales, testing, installation and project coordination.</p></div></li>
+        <li><div class="when mono">Jun 2018 – Jun 2019</div><div><div class="role">R &amp; T</div><div class="org">Sundaram BNP Paribas Fund Services</div><p>Processed mutual fund transactions in the Fund Report Transaction department, handling back-end operations for a registrar &amp; transfer agent and keeping investor transactions and fund reports accurate and on time.</p></div></li>
+      </ol>
     </div>
-    <div class="col-lg-10">
-      <div class="card p-4"><div class="d-flex gap-3">
-        <img class="exp-logo" src="img/ex.jpg" alt="">
-        <div>
-          <h5 class="mb-0">Full-Stack Developer (Apprenticeship) · GUVI Geek Networks, IITM Research Park</h5>
-          <div class="timeline-date">May 2021 – Dec 2021</div>
-          <p class="mt-2 mb-0">Full-stack MERN apprenticeship — MongoDB, Express, React and Node.js.</p>
-        </div>
-      </div></div>
-    </div>
-    <div class="col-lg-10">
-      <div class="card p-4"><div class="d-flex gap-3">
-        <img class="exp-logo" src="img/ss.jpg" alt="Sakthi Solutions">
-        <div>
-          <h5 class="mb-0">Senior Business Developer · Sakthi Solutions</h5>
-          <div class="timeline-date">Jul 2019 – May 2021</div>
-          <p class="mt-2 mb-2">Joined as software &amp; technical support executive and grew into business development — Point of Sale software, testing, installations and project coordination.</p>
-          <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/company/sakthi-solutions/about/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div></div>
-    </div>
-    <div class="col-lg-10">
-      <div class="card p-4"><div class="d-flex gap-3">
-        <img class="exp-logo" src="img/bnp.jpg" alt="Sundaram BNP Paribas">
-        <div>
-          <h5 class="mb-0">R &amp; T Specialist · Sundaram BNP Paribas Fund Services</h5>
-          <div class="timeline-date">Jun 2018 – Jun 2019</div>
-          <p class="mt-2 mb-2">Processed mutual fund transactions in the Fund Report Transaction department, handling back-end operations for a registrar &amp; transfer agent and keeping investor transactions and fund reports accurate and on time.</p>
-          <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/company/sundaram-finance/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h2 class="title">Contact</h2>
-  <div class="row g-5">
-    <div class="col-md-6">
-      <h5>Get in Touch</h5>
-      <p>For anything about my work, reach me by phone or email.</p>
-      <p class="mb-1"><b>Phone:</b> <a href="tel:+918838250084">+91 88382 50084</a></p>
-      <p class="mb-1"><b>Email:</b> <a href="mailto:rpsram98@gmail.com">rpsram98@gmail.com</a></p>
-      <p class="mb-3"><b>Location:</b> Madurai, Tamil Nadu, India 🇮🇳</p>
-      <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn btn-accent btn-sm ms-2" href="https://github.com/SRIRAM-POTHUMANI" target="_blank" rel="noopener">GitHub</a>
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow">Toolbox</p>
+      <h2>Skills</h2>
+      <p class="sub">What I reach for day to day.</p>
+      <div class="skills">
+        <div class="skill-row"><b>Languages</b><span>TypeScript, JavaScript, SQL, HTML, CSS</span></div>
+        <div class="skill-row"><b>Backend</b><span>Node.js, Moleculer microservices, Express, REST / OpenAPI, Kafka, Redis</span></div>
+        <div class="skill-row"><b>Data</b><span>MongoDB, PostgreSQL / PostGIS, Sequelize, Cube.js</span></div>
+        <div class="skill-row"><b>Frontend</b><span>React, Next.js, Bootstrap, Material UI</span></div>
+        <div class="skill-row"><b>DevOps &amp; cloud</b><span>Docker, Kubernetes (GKE), Azure DevOps &amp; Artifacts, AWS S3, CI/CD</span></div>
+        <div class="skill-row"><b>AI-assisted</b><span>Claude / Claude Code for design, development, review, debugging and deployment</span></div>
+        <div class="skill-row"><b>Domain</b><span>Billing &amp; invoicing, ZATCA e-invoicing, Epicor ERP, approval workflows, telematics</span></div>
+        <div class="skill-row"><b>Education</b><span>B.Sc. Information Technology, MTNC Madurai</span></div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h5>Send a Message</h5>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="d-none"><label>Skip: <input name="bot-field"></label></p>
-        <input class="form-control mb-2" name="name" placeholder="Name *" required>
-        <input class="form-control mb-2" type="email" name="email" placeholder="Email *" required>
-        <textarea class="form-control mb-2" name="message" rows="4" placeholder="Message *" required></textarea>
-        <button class="btn btn-accent" type="submit">SUBMIT</button>
-      </form>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk</h2>
+        <p class="sub">Open to conversations about backend, platform and full-stack roles, and about billing, e-invoicing or ERP integration work. Email is the fastest way to reach me.</p>
+        <a class="btn primary" href="mailto:rpsram98@gmail.com">rpsram98@gmail.com</a>
+      </div>
+      <div class="links">
+        <a class="link" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener"><div><small>LinkedIn</small>in/sriram-pothumani</div><span class="arrow">↗</span></a>
+        <a class="link" href="https://github.com/SRIRAM-POTHUMANI" target="_blank" rel="noopener"><div><small>GitHub</small>SRIRAM-POTHUMANI</div><span class="arrow">↗</span></a>
+        <a class="link" href="tel:+918838250084"><div><small>Phone</small>+91 88382 50084</div><span class="arrow">↗</span></a>
+        <a class="link" href="https://drive.google.com/file/d/1gTHZJDqmlt2QOo9E3Vg3lWd5k6s2M29e/view?usp=sharing" target="_blank" rel="noopener"><div><small>CV</small>Sriram_Pothumani_CV.pdf</div><span class="arrow">↗</span></a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<footer>© <span id="yr"></span> Designed by Sriram Pothumani</footer>
-</div>
+<footer>
+  <div class="wrap"><span>© <span id="yr"></span> Sriram Pothumani</span><span>Madurai, India</span></div>
+</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-const D = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
-const groups = {
-  'Languages & Frontend': [['TypeScript','typescript/typescript-original'],['JavaScript','javascript/javascript-original'],['ReactJS','react/react-original'],['Next.js','nextjs/nextjs-original'],['HTML5','html5/html5-original'],['CSS3','css3/css3-original'],['Bootstrap 5','bootstrap/bootstrap-original'],['Material-UI','materialui/materialui-original']],
-  'Backend & Data': [['NodeJS','nodejs/nodejs-original'],['ExpressJS','express/express-original'],['Moleculer','nodejs/nodejs-plain'],['MongoDB','mongodb/mongodb-original'],['PostgreSQL','postgresql/postgresql-original'],['Sequelize','sequelize/sequelize-original'],['Kafka','apachekafka/apachekafka-original'],['Redis','redis/redis-original']],
-  'AI & Tooling': [['Claude / Claude Code','https://cdn.jsdelivr.net/npm/simple-icons@13/icons/claude.svg'],['VS Code','vscode/vscode-original'],['Postman','postman/postman-original'],['Linux / WSL','linux/linux-original']],
-  'DevOps & Cloud': [['Docker','docker/docker-original'],['Kubernetes','kubernetes/kubernetes-original'],['Google Cloud','googlecloud/googlecloud-original'],['Azure','azure/azure-original'],['AWS S3','amazonwebservices/amazonwebservices-original-wordmark'],['Git / GitHub','github/github-original'],['Azure DevOps','azuredevops/azuredevops-original'],['Node-RED','nodered/nodered-original']]
-};
-document.getElementById('skillGrid').innerHTML = Object.entries(groups).map(([g, items]) =>
-  `<div class="skill-group text-center">${g}</div><div class="row row-cols-3 row-cols-sm-4 row-cols-lg-8 g-2">` +
-  items.map(([n, p]) => `<div class="col"><div class="skills"><img src="${p.startsWith('http') ? p : D + p + '.svg'}" alt="" loading="lazy"><span class="small text-center">${n}</span></div></div>`).join('') +
-  `</div>`).join('');
-
-document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  document.getElementById('theme').addEventListener('click', () => {
+    const root = document.documentElement;
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  });
 </script>
 </body>
 </html>
