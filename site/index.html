@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Sriram Pothumani — Full-Stack Developer at Runcode. Node.js, TypeScript, React, microservices.">
+<title>Sriram Pothumani Portfolio</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root { --accent: #8a2be2; --accent-soft: #f3e8ff; --ink: #23272b; }
+  * { box-sizing: border-box; font-family: Quicksand, sans-serif; letter-spacing: .5px; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { background: var(--ink); margin: 0; }
+  .page { background: #fff; max-width: 1140px; margin: 0 auto; min-height: 100vh; box-shadow: 0 0 40px rgba(0,0,0,.5); }
+  .navbar { box-shadow: 0 2px 12px rgba(0,0,0,.12); background: #fff; }
+  .navbar-brand img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+  .myname { background: linear-gradient(90deg, #a855f7, #8a2be2); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: hue 4s linear infinite; font-weight: 600; }
+  @keyframes hue { to { filter: hue-rotate(1turn); } }
+  .nav-link { color: #555 !important; }
+  .nav-link:hover { color: var(--accent) !important; text-decoration: underline var(--accent); }
+  .btn-accent { color: var(--accent); border: 1px solid var(--accent); }
+  .btn-accent:hover { background: var(--accent); color: #fff; }
+  section { padding: 64px 24px; }
+  section + section { border-top: 1px solid #eee; }
+  h2.title { color: var(--accent); font-weight: 600; margin-bottom: 32px; text-align: center; }
+  .hero-photo { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 30px rgba(138,43,226,.25); }
+  .hello { color: var(--accent); border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+  .about p { font-size: 1.05rem; line-height: 1.7; color: #333; }
+  .stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+  .stat { flex: 1 1 120px; background: var(--accent-soft); border-radius: 12px; padding: 12px; text-align: center; }
+  .stat b { display: block; font-size: 1.5rem; color: var(--accent); }
+  .skills { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 4px; border-radius: 12px; }
+  .skills img { width: 56px; height: 56px; object-fit: contain; margin-bottom: 10px; transition: transform .3s; }
+  .skills:hover { color: var(--accent); }
+  .skills:hover img { transform: scale(1.1); }
+  .skill-group { font-weight: 600; color: #777; margin: 24px 0 8px; text-transform: uppercase; font-size: .8rem; letter-spacing: 1.5px; }
+  .card { border: 1px solid #eee; border-radius: 16px; overflow: hidden; transition: box-shadow .3s, transform .3s; height: 100%; }
+  .card:hover { box-shadow: 0 10px 30px rgba(138,43,226,.18); transform: translateY(-3px); }
+  .carousel-item img { height: 240px; object-fit: cover; }
+  .work-banner { height: 160px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; font-weight: 700; }
+  .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 2px 10px; font-size: .78rem; margin: 2px; }
+  .card ul { padding-left: 18px; color: #444; }
+  .card li { margin-bottom: 4px; }
+  .exp-logo { width: 72px; height: 72px; object-fit: contain; border-radius: 12px; background: #fafafa; border: 1px solid #eee; padding: 6px; flex-shrink: 0; }
+  .exp-logo.text { display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; background: linear-gradient(135deg, #a855f7, #6d28d9); border: 0; font-size: 1.4rem; }
+  .timeline-date { color: var(--accent); font-weight: 600; font-size: .9rem; }
+  footer { background: #f8f8f8; padding: 20px; text-align: center; color: #666; }
+  @media (max-width: 576px) { section { padding: 48px 16px; } .hero-photo { width: 200px; height: 200px; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#about">
+      <img src="img/navbar-min.JPG" alt=""><span class="myname">Sriram Pothumani</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Softwares</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="btn btn-accent btn-sm ms-lg-2 my-2 my-lg-0" href="https://drive.google.com/file/d/1BJmcHfIim3U0XXf0FQ8LQfJ5PVTvMGxH/view?usp=sharing" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="row align-items-center g-5 justify-content-center">
+    <div class="col-md-5 text-center"><img class="hero-photo" src="img/aboutphoto-min.JPG" alt="Sriram Pothumani"></div>
+    <div class="col-md-7">
+      <h3 class="hello">Hello 👋</h3>
+      <p>I'm a <b>Full-Stack Developer</b> from Madurai, Tamil Nadu, India 🇮🇳, working at <b>Runcode</b> since February 2022. I build and run production systems for fleet, rental and vehicle-sharing businesses — from Node.js / TypeScript microservices and Kafka pipelines to React and Next.js admin portals.</p>
+      <p>Most of my days go into billing and invoicing engines, <b>ZATCA e-invoicing</b> (Saudi Arabia), <b>ERP integrations with Epicor</b>, approval workflows and multi-tenant platforms — and I own releases and deployments for multiple client environments.</p>
+      <div class="stats">
+        <div class="stat"><b>4+ yrs</b>at Runcode</div>
+        <div class="stat"><b>1,500+</b>commits shipped</div>
+        <div class="stat"><b>20+</b>services worked on</div>
+      </div>
+      <p class="mb-3">I like talking to people and hearing new ideas 💡. Feel free to reach out ⤵️</p>
+      <a class="btn btn-accent" href="#contact">Contact</a>
+      <a class="btn btn-accent ms-2" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-accent ms-2" href="https://github.com/SRIRAM-POTHUMANI" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="title">My Software Skills</h2>
+  <div id="skillGrid"></div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <h2 class="title">Portfolio</h2>
+  <h5 class="skill-group text-center">Professional work · Runcode</h5>
+  <div class="row g-4 mb-5">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="work-banner" style="background:linear-gradient(135deg,#8a2be2,#4f46e5)">Fleetable</div>
+        <div class="card-body">
+          <h5>Fleetable — Fleet &amp; Rental Management Platform</h5>
+          <p class="text-muted small">Enterprise fleet leasing / rental ERP · Feb 2022 – present</p>
+          <ul>
+            <li>Core API: invoicing &amp; billing events, contracts, collections, refunds, cash registers, bank deposits, settlements and accruals.</li>
+            <li>Built the <b>ZATCA e-invoicing</b> library (UBL XML generation, signing, QR, BR-KSA validation) and POS invoice numbering.</li>
+            <li><b>Epicor ERP</b> integration — auto-posting of invoices, collections and refunds, fiscal-period handling, Kafka consumers and retry jobs.</li>
+            <li>Shared workflow/approval and idempotency mixins used across services; payment-gateway callbacks and promo codes.</li>
+            <li>Web portal screens in React: approvals, collections/refunds, bank accounts, ZATCA credit/debit notes.</li>
+            <li>Own release versioning, Docker/pipeline updates and multi-client deployments on Kubernetes (GKE).</li>
+          </ul>
+          <span class="tag">Node.js</span><span class="tag">Moleculer</span><span class="tag">MongoDB</span><span class="tag">Kafka</span><span class="tag">React</span><span class="tag">Kubernetes</span><span class="tag">ZATCA</span><span class="tag">Epicor</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="work-banner" style="background:linear-gradient(135deg,#0ea5e9,#8a2be2)">Check N Share</div>
+        <div class="card-body">
+          <h5>Check N Share — Vehicle Sharing &amp; Booking Platform</h5>
+          <p class="text-muted small">Corporate car-sharing platform · Jun 2022 – present</p>
+          <ul>
+            <li>One of the original builders; contributed to almost every microservice.</li>
+            <li>Contract lifecycle: bookings, advance bookings, overlap checks, force-close, no-show and auto-cancel, cost calculation.</li>
+            <li>Next.js admin control panel — the most-committed codebase — plus the API gateway.</li>
+            <li>Telematics &amp; vehicle commands (lock/unlock), geofences &amp; parking polygons, damage checklists with email + push notifications.</li>
+            <li>Multi-tenant roles &amp; permissions, activity logs / contract flow history, announcements and Cube.js reports.</li>
+          </ul>
+          <span class="tag">TypeScript</span><span class="tag">Moleculer</span><span class="tag">PostgreSQL / PostGIS</span><span class="tag">Sequelize</span><span class="tag">Next.js</span><span class="tag">Cube.js</span><span class="tag">Ory</span><span class="tag">Azure</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h5 class="skill-group text-center">Personal projects</h5>
+  <div class="row g-4" id="projects"></div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2 class="title">Experience</h2>
+  <div class="row g-4 justify-content-center">
+    <div class="col-lg-10">
+      <div class="card p-4"><div class="d-flex gap-3">
+        <div class="exp-logo text">R</div>
+        <div>
+          <h5 class="mb-0">Full-Stack Developer · Runcode</h5>
+          <div class="timeline-date">Feb 2022 – Present</div>
+          <p class="mt-2 mb-2">Full-stack developer on two production platforms — Fleetable (fleet leasing &amp; rental ERP) and Check N Share (vehicle sharing). Backend-heavy across Node.js/TypeScript microservices with ownership of billing, e-invoicing, ERP integrations, releases and deployments.</p>
+          <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div></div>
+    </div>
+    <div class="col-lg-10">
+      <div class="card p-4"><div class="d-flex gap-3">
+        <img class="exp-logo" src="img/ss.jpg" alt="Sakthi Solutions">
+        <div>
+          <h5 class="mb-0">Business Developer · Sakthi Solutions</h5>
+          <div class="timeline-date">2 years</div>
+          <p class="mt-2 mb-2">Worked on Point of Sale software — practising, testing and exploring new features for outsourcing clients.</p>
+          <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/company/sakthi-solutions/about/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div></div>
+    </div>
+    <div class="col-lg-10">
+      <div class="card p-4"><div class="d-flex gap-3">
+        <img class="exp-logo" src="img/bnp.jpg" alt="Sundaram BNP Paribas">
+        <div>
+          <h5 class="mb-0">R &amp; T Specialist · Sundaram BNP Paribas Fund Services</h5>
+          <div class="timeline-date">1 year</div>
+          <p class="mt-2 mb-2">Fund Report Transaction department — back-end processing for mutual funds as a registrar &amp; transfer intermediary.</p>
+          <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/company/sundaram-finance/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div></div>
+    </div>
+    <div class="col-lg-10">
+      <div class="card p-4"><div class="d-flex gap-3">
+        <img class="exp-logo" src="img/ex.jpg" alt="">
+        <div>
+          <h5 class="mb-0">MERN Stack Certification · GUVI Geek Networks (IIT-M incubated)</h5>
+          <div class="timeline-date">2021</div>
+          <p class="mt-2 mb-0">Full-stack JavaScript bootcamp — MongoDB, Express, React and Node.js.</p>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="title">Contact</h2>
+  <div class="row g-5">
+    <div class="col-md-6">
+      <h5>Get in Touch</h5>
+      <p>For anything about my work, reach me by phone or email.</p>
+      <p class="mb-1"><b>Phone:</b> <a href="tel:+918838250084">+91 88382 50084</a></p>
+      <p class="mb-1"><b>Email:</b> <a href="mailto:rpsram98@gmail.com">rpsram98@gmail.com</a></p>
+      <p class="mb-3"><b>Location:</b> Madurai, Tamil Nadu, India 🇮🇳</p>
+      <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn btn-accent btn-sm ms-2" href="https://github.com/SRIRAM-POTHUMANI" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="col-md-6">
+      <h5>Send a Message</h5>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="d-none"><label>Skip: <input name="bot-field"></label></p>
+        <input class="form-control mb-2" name="name" placeholder="Name *" required>
+        <input class="form-control mb-2" type="email" name="email" placeholder="Email *" required>
+        <textarea class="form-control mb-2" name="message" rows="4" placeholder="Message *" required></textarea>
+        <button class="btn btn-accent" type="submit">SUBMIT</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> Designed by Sriram Pothumani</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const D = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
+const groups = {
+  'Languages & Frontend': [['TypeScript','typescript/typescript-original'],['JavaScript','javascript/javascript-original'],['ReactJS','react/react-original'],['Next.js','nextjs/nextjs-original'],['HTML5','html5/html5-original'],['CSS3','css3/css3-original'],['Bootstrap 5','bootstrap/bootstrap-original'],['Material-UI','materialui/materialui-original']],
+  'Backend & Data': [['NodeJS','nodejs/nodejs-original'],['ExpressJS','express/express-original'],['Moleculer','nodejs/nodejs-plain'],['MongoDB','mongodb/mongodb-original'],['PostgreSQL','postgresql/postgresql-original'],['Sequelize','sequelize/sequelize-original'],['Kafka','apachekafka/apachekafka-original'],['Redis','redis/redis-original']],
+  'DevOps & Cloud': [['Docker','docker/docker-original'],['Kubernetes','kubernetes/kubernetes-original'],['Google Cloud','googlecloud/googlecloud-original'],['Azure','azure/azure-original'],['AWS S3','amazonwebservices/amazonwebservices-original-wordmark'],['Git / GitHub','github/github-original'],['Azure DevOps','azuredevops/azuredevops-original'],['Node-RED','nodered/nodered-original']]
+};
+document.getElementById('skillGrid').innerHTML = Object.entries(groups).map(([g, items]) =>
+  `<div class="skill-group text-center">${g}</div><div class="row row-cols-3 row-cols-sm-4 row-cols-lg-8 g-2">` +
+  items.map(([n, p]) => `<div class="col"><div class="skills"><img src="${D}${p}.svg" alt="" loading="lazy"><span class="small text-center">${n}</span></div></div>`).join('') +
+  `</div>`).join('');
+
+const projects = [
+  ['Amazon Clone', ['amazon1.png','amazon2.png','amazon3.png'], 'Responsive clone of the Amazon storefront (also built as an APK with Capacitor). Add and remove basket items, Firebase authentication and stored order history.', 'https://github.com/SRIRAM-POTHUMANI/amazon-clone-react-firebase', 'https://sriram-amazon-clone.netlify.app/'],
+  ['Netflix Clone', ['netflix1.png','netflix2.png','netflix3.png'], 'Movie trailer app using the TMDB API for movie data and the YouTube library for trailers.', 'https://github.com/SRIRAM-POTHUMANI/netflix-clone', 'https://sriram-netflix-clone.netlify.app/'],
+  ['Messenger App', ['msg1.png','msg2.png','msg3.png'], 'Minimal messaging app — register users, private chats, switch between conversations, live messages via Pusher.', 'https://github.com/SRIRAM-POTHUMANI/msg-29-12-2021', 'https://msg-app-by-sriram.netlify.app/']
+];
+document.getElementById('projects').innerHTML = projects.map(([t, imgs, d, src, live], i) => `
+  <div class="col-md-6 col-lg-4"><div class="card">
+    <div id="c${i}" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner">
+      ${imgs.map((im, j) => `<div class="carousel-item ${j ? '' : 'active'}"><img src="img/${im}" class="d-block w-100" alt="${t} screenshot" loading="lazy"></div>`).join('')}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#c${i}" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#c${i}" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div>
+    <div class="card-body"><h5>${t}</h5><p class="small text-muted">${d}</p>
+      <a class="btn btn-accent btn-sm" href="${src}" target="_blank" rel="noopener">Source Code</a>
+      <a class="btn btn-accent btn-sm ms-2" href="${live}" target="_blank" rel="noopener">Live Demo</a></div>
+  </div></div>`).join('');
+document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

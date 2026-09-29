@@ -1,0 +1,4 @@
+# Serve the static site in site/. The 2021 React app in src/ is kept for reference and is no longer built.
+[build]
+  command = "echo 'static site, no build step'"
+  publish = "site"
