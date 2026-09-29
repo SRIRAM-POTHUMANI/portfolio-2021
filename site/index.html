@@ -40,8 +40,7 @@
   .skill-group { font-weight: 600; color: #777; margin: 24px 0 8px; text-transform: uppercase; font-size: .8rem; letter-spacing: 1.5px; }
   .card { border: 1px solid #eee; border-radius: 16px; overflow: hidden; transition: box-shadow .3s, transform .3s; height: 100%; }
   .card:hover { box-shadow: 0 10px 30px rgba(138,43,226,.18); transform: translateY(-3px); }
-  .carousel-item img { height: 240px; object-fit: cover; }
-  .work-banner { height: 160px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; font-weight: 700; }
+    .work-banner { height: 160px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; font-weight: 700; }
   .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 2px 10px; font-size: .78rem; margin: 2px; }
   .card ul { padding-left: 18px; color: #444; }
   .card li { margin-bottom: 4px; }
@@ -104,8 +103,7 @@
 <!-- PORTFOLIO -->
 <section id="portfolio">
   <h2 class="title">Portfolio</h2>
-  <h5 class="skill-group text-center">Professional work · Runcode</h5>
-  <div class="row g-4 mb-5">
+  <div class="row g-4">
     <div class="col-lg-6">
       <div class="card">
         <div class="work-banner" style="background:linear-gradient(135deg,#8a2be2,#4f46e5)">Fleetable</div>
@@ -142,9 +140,6 @@
       </div>
     </div>
   </div>
-
-  <h5 class="skill-group text-center">Personal projects</h5>
-  <div class="row g-4" id="projects"></div>
 </section>
 
 <!-- EXPERIENCE -->
@@ -168,7 +163,7 @@
         <div>
           <h5 class="mb-0">Full-Stack Developer (Apprenticeship) · GUVI Geek Networks, IITM Research Park</h5>
           <div class="timeline-date">May 2021 – Dec 2021</div>
-          <p class="mt-2 mb-0">Full-stack MERN apprenticeship — MongoDB, Express, React and Node.js; built the personal projects above.</p>
+          <p class="mt-2 mb-0">Full-stack MERN apprenticeship — MongoDB, Express, React and Node.js.</p>
         </div>
       </div></div>
     </div>
@@ -189,7 +184,7 @@
         <div>
           <h5 class="mb-0">R &amp; T Specialist · Sundaram BNP Paribas Fund Services</h5>
           <div class="timeline-date">Jun 2018 – Jun 2019</div>
-          <p class="mt-2 mb-2">Fund Report Transaction department — back-end processing for mutual funds as a registrar &amp; transfer intermediary.</p>
+          <p class="mt-2 mb-2">Processed mutual fund transactions in the Fund Report Transaction department, handling back-end operations for a registrar &amp; transfer agent and keeping investor transactions and fund reports accurate and on time.</p>
           <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/company/sundaram-finance/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div></div>
@@ -240,22 +235,6 @@ document.getElementById('skillGrid').innerHTML = Object.entries(groups).map(([g,
   items.map(([n, p]) => `<div class="col"><div class="skills"><img src="${D}${p}.svg" alt="" loading="lazy"><span class="small text-center">${n}</span></div></div>`).join('') +
   `</div>`).join('');
 
-const projects = [
-  ['Amazon Clone', ['amazon1.png','amazon2.png','amazon3.png'], 'Responsive clone of the Amazon storefront (also built as an APK with Capacitor). Add and remove basket items, Firebase authentication and stored order history.', 'https://github.com/SRIRAM-POTHUMANI/amazon-clone-react-firebase', 'https://sriram-amazon-clone.netlify.app/'],
-  ['Netflix Clone', ['netflix1.png','netflix2.png','netflix3.png'], 'Movie trailer app using the TMDB API for movie data and the YouTube library for trailers.', 'https://github.com/SRIRAM-POTHUMANI/netflix-clone', 'https://sriram-netflix-clone.netlify.app/'],
-  ['Messenger App', ['msg1.png','msg2.png','msg3.png'], 'Minimal messaging app — register users, private chats, switch between conversations, live messages via Pusher.', 'https://github.com/SRIRAM-POTHUMANI/msg-29-12-2021', 'https://msg-app-by-sriram.netlify.app/']
-];
-document.getElementById('projects').innerHTML = projects.map(([t, imgs, d, src, live], i) => `
-  <div class="col-md-6 col-lg-4"><div class="card">
-    <div id="c${i}" class="carousel slide" data-bs-ride="carousel"><div class="carousel-inner">
-      ${imgs.map((im, j) => `<div class="carousel-item ${j ? '' : 'active'}"><img src="img/${im}" class="d-block w-100" alt="${t} screenshot" loading="lazy"></div>`).join('')}
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#c${i}" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
-    <button class="carousel-control-next" type="button" data-bs-target="#c${i}" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button></div>
-    <div class="card-body"><h5>${t}</h5><p class="small text-muted">${d}</p>
-      <a class="btn btn-accent btn-sm" href="${src}" target="_blank" rel="noopener">Source Code</a>
-      <a class="btn btn-accent btn-sm ms-2" href="${live}" target="_blank" rel="noopener">Live Demo</a></div>
-  </div></div>`).join('');
 document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
