@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sriram Pothumani - CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Quicksand, Arial, sans-serif; color: #222; font-size: 10.2pt; line-height: 1.42; margin: 0; }
+  .accent { color: #8a2be2; }
+  header { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #8a2be2; padding-bottom: 8px; margin-bottom: 10px; }
+  h1 { margin: 0; font-size: 22pt; letter-spacing: .5px; }
+  .role { font-size: 11pt; font-weight: 600; color: #8a2be2; margin-top: 2px; }
+  .contact { text-align: right; font-size: 9.2pt; line-height: 1.5; }
+  .contact a { color: #222; text-decoration: none; white-space: nowrap; }
+  .role { white-space: nowrap; }
+  h2 { font-size: 11pt; text-transform: uppercase; letter-spacing: 1.5px; color: #8a2be2; margin: 14px 0 6px; border-bottom: 1px solid #e5d4fb; padding-bottom: 2px; }
+  p { margin: 0 0 6px; }
+  .job { margin-bottom: 9px; page-break-inside: avoid; }
+  .job-head { display: flex; justify-content: space-between; font-weight: 700; }
+  .job-sub { display: flex; justify-content: space-between; color: #555; font-size: 9.4pt; margin-bottom: 3px; }
+  ul { margin: 2px 0 0; padding-left: 16px; }
+  li { margin-bottom: 2px; }
+  .proj { font-weight: 700; margin-top: 5px; }
+  .skills { display: grid; grid-template-columns: 130px 1fr; gap: 3px 10px; }
+  .skills b { color: #444; }
+  .small { font-size: 9.4pt; color: #555; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Sriram Pothumani</h1>
+    <div class="role">Full-Stack Developer · Node.js · TypeScript · React</div>
+  </div>
+  <div class="contact">
+    Madurai, Tamil Nadu, India<br>
+    +91 88382 50084 · <a href="mailto:rpsram98@gmail.com">rpsram98@gmail.com</a><br>
+    <a href="https://www.linkedin.com/in/sriram-pothumani/">linkedin.com/in/sriram-pothumani</a><br>
+    <a href="https://sriram-pothumani.netlify.app/">sriram-pothumani.netlify.app</a><br><a href="https://github.com/SRIRAM-POTHUMANI">github.com/SRIRAM-POTHUMANI</a>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p>Full-stack developer with 4.5+ years at Runcode Software Solutions building and running production platforms for fleet leasing, rental and corporate vehicle sharing. Backend-heavy across Node.js/TypeScript microservices, MongoDB, PostgreSQL and Kafka, with React/Next.js admin portals. I own billing and invoicing engines, ZATCA e-invoicing, Epicor ERP integration, and release and multi-client deployments on Kubernetes.</p>
+
+<h2>Experience</h2>
+<div class="job">
+  <div class="job-head"><span>Full-Stack Developer · Runcode Software Solutions</span><span>Feb 2022 – Present</span></div>
+  <div class="job-sub"><span>Full-time</span><span>Hyderabad, India</span></div>
+  <div class="proj">Fleetable: fleet leasing &amp; rental ERP</div>
+  <ul>
+    <li>Core billing API: invoicing events, contracts, collections and refunds across payment modes, cash registers, bank deposits, settlements and accruals.</li>
+    <li>Built the ZATCA (Saudi e-invoicing) library: UBL XML generation, cryptographic signing, QR codes, BR-KSA validation fixes and POS invoice numbering.</li>
+    <li>Epicor ERP integration: auto-posting of invoices, collections and refunds, fiscal-period handling, Kafka consumers and retry jobs.</li>
+    <li>Shared service modules (approval workflows, idempotency, round-robin assignment) used across the microservice estate; payment-gateway callbacks and promo codes.</li>
+    <li>React web-portal screens for approvals, collections/refunds, bank accounts and ZATCA credit/debit notes.</li>
+    <li>Own release versioning, Docker/pipeline updates and multi-client deployments on Kubernetes (GKE), plus production data fixes and ops scripts.</li>
+  </ul>
+  <div class="proj">Check N Share: corporate vehicle-sharing &amp; booking platform</div>
+  <ul>
+    <li>One of the original builders; contributed to nearly every microservice (Moleculer + TypeScript, Sequelize on PostgreSQL/PostGIS).</li>
+    <li>Contract lifecycle: bookings and advance bookings, overlap checks, force-close, no-show and auto-cancel, cost calculation.</li>
+    <li>Largest contributor to the Next.js admin control panel and the API gateway.</li>
+    <li>Telematics and vehicle commands (lock/unlock), geofences and parking polygons, damage checklists with email and push notifications.</li>
+    <li>Multi-tenant roles &amp; permissions, activity logs / contract flow history, announcements and Cube.js reporting.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span>Full-Stack Developer (Apprenticeship) · GUVI Geek Networks, IITM Research Park</span><span>May 2021 – Dec 2021</span></div>
+  <div class="job-sub"><span>MERN stack</span><span>Chennai, India</span></div>
+  <ul><li>Built full-stack MERN projects, including an Amazon clone (Firebase auth, orders, Capacitor APK), a Netflix-style trailer app (TMDB API) and a real-time messenger (Pusher).</li></ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span>Senior Business Developer · Sakthi Solutions</span><span>Jul 2019 – May 2021</span></div>
+  <div class="job-sub"><span>Point of Sale software</span><span>Chennai, India</span></div>
+  <ul><li>Joined as software &amp; technical support executive and grew into business development: POS software sales, testing, installation and project coordination.</li></ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span>R &amp; T · Sundaram BNP Paribas Fund Services</span><span>Jun 2018 – Jun 2019</span></div>
+  <div class="job-sub"><span>Fund Report Transaction department</span><span>Madurai, India</span></div>
+  <ul><li>Back-end transaction processing for mutual funds as a registrar &amp; transfer intermediary.</li></ul>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <b>Languages</b><span>TypeScript, JavaScript (ES202x), HTML5, CSS3, SQL</span>
+  <b>Backend</b><span>Node.js, Moleculer microservices, Express, REST/OpenAPI, Kafka, Redis</span>
+  <b>Data</b><span>MongoDB, PostgreSQL / PostGIS, Sequelize, Cube.js</span>
+  <b>Frontend</b><span>React, Next.js, Bootstrap, Material-UI</span>
+  <b>DevOps &amp; Cloud</b><span>Docker, Kubernetes (GKE), Azure (DevOps, Artifacts, Blob), AWS S3, Git, CI/CD pipelines</span>
+  <b>Domain</b><span>Billing &amp; invoicing, ZATCA e-invoicing, Epicor ERP integration, approval workflows, multi-tenant SaaS, telematics</span>
+</div>
+
+<h2>Education</h2>
+<div class="job-head" style="font-weight:600"><span>B.Sc. Information Technology · MTNC, Madurai</span></div>
+<div class="small">MERN Stack Development · GUVI Geek Networks (IITM Research Park), 2021</div>
+</body>
+</html>
