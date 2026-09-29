@@ -81,6 +81,7 @@
       <h3 class="hello">Hello 👋</h3>
       <p>I'm a <b>Full-Stack Developer</b> from Madurai, Tamil Nadu, India 🇮🇳, working at <b>Runcode Software Solutions</b> since February 2022. I build and run production systems for fleet, rental and vehicle-sharing businesses — from Node.js / TypeScript microservices and Kafka pipelines to React and Next.js admin portals.</p>
       <p>Most of my days go into billing and invoicing engines, <b>ZATCA e-invoicing</b> (Saudi Arabia), <b>ERP integrations with Epicor</b>, approval workflows and multi-tenant platforms — and I own releases and deployments for multiple client environments.</p>
+      <p>I work AI-first with <b>Claude</b> (Claude Code) as my engineering partner across the whole cycle: solutioning and design, development, code review, debugging, and releases and deployments.</p>
       <div class="stats">
         <div class="stat"><b>4+ yrs</b>at Runcode</div>
         <div class="stat"><b>1,500+</b>commits shipped</div>
@@ -152,7 +153,7 @@
         <div>
           <h5 class="mb-0">Full-Stack Developer · Runcode Software Solutions</h5>
           <div class="timeline-date">Feb 2022 – Present · Full-time</div>
-          <p class="mt-2 mb-2">Full-stack developer on two production platforms — Fleetable (fleet leasing &amp; rental ERP) and Check N Share (vehicle sharing). Backend-heavy across Node.js/TypeScript microservices with ownership of billing, e-invoicing, ERP integrations, releases and deployments.</p>
+          <p class="mt-2 mb-2">Full-stack developer on two production platforms — Fleetable (fleet leasing &amp; rental ERP) and Check N Share (vehicle sharing). Backend-heavy across Node.js/TypeScript microservices with ownership of billing, e-invoicing, ERP integrations, releases and deployments. Uses Claude (Claude Code) day to day for solutioning, development, code review and deployment.</p>
           <a class="btn btn-accent btn-sm" href="https://www.linkedin.com/in/sriram-pothumani/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div></div>
@@ -228,11 +229,12 @@ const D = 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/';
 const groups = {
   'Languages & Frontend': [['TypeScript','typescript/typescript-original'],['JavaScript','javascript/javascript-original'],['ReactJS','react/react-original'],['Next.js','nextjs/nextjs-original'],['HTML5','html5/html5-original'],['CSS3','css3/css3-original'],['Bootstrap 5','bootstrap/bootstrap-original'],['Material-UI','materialui/materialui-original']],
   'Backend & Data': [['NodeJS','nodejs/nodejs-original'],['ExpressJS','express/express-original'],['Moleculer','nodejs/nodejs-plain'],['MongoDB','mongodb/mongodb-original'],['PostgreSQL','postgresql/postgresql-original'],['Sequelize','sequelize/sequelize-original'],['Kafka','apachekafka/apachekafka-original'],['Redis','redis/redis-original']],
+  'AI & Tooling': [['Claude / Claude Code','https://cdn.jsdelivr.net/npm/simple-icons@13/icons/claude.svg'],['VS Code','vscode/vscode-original'],['Postman','postman/postman-original'],['Linux / WSL','linux/linux-original']],
   'DevOps & Cloud': [['Docker','docker/docker-original'],['Kubernetes','kubernetes/kubernetes-original'],['Google Cloud','googlecloud/googlecloud-original'],['Azure','azure/azure-original'],['AWS S3','amazonwebservices/amazonwebservices-original-wordmark'],['Git / GitHub','github/github-original'],['Azure DevOps','azuredevops/azuredevops-original'],['Node-RED','nodered/nodered-original']]
 };
 document.getElementById('skillGrid').innerHTML = Object.entries(groups).map(([g, items]) =>
   `<div class="skill-group text-center">${g}</div><div class="row row-cols-3 row-cols-sm-4 row-cols-lg-8 g-2">` +
-  items.map(([n, p]) => `<div class="col"><div class="skills"><img src="${D}${p}.svg" alt="" loading="lazy"><span class="small text-center">${n}</span></div></div>`).join('') +
+  items.map(([n, p]) => `<div class="col"><div class="skills"><img src="${p.startsWith('http') ? p : D + p + '.svg'}" alt="" loading="lazy"><span class="small text-center">${n}</span></div></div>`).join('') +
   `</div>`).join('');
 
 document.getElementById('yr').textContent = new Date().getFullYear();
