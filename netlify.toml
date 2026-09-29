@@ -2,3 +2,10 @@
 [build]
   command = "echo 'static site, no build step'"
   publish = "site"
+
+# Browsers and search engines request /favicon.ico directly; serve the current photo crop.
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/img/sriram-icon.jpg"
+  status = 200
+  force = true
